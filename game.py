@@ -40,6 +40,18 @@ while True :
     b_count = 0
 
     # 문제 숫자 / 내 숫자 비교 > s/b 갯수 파악
+    # 내 숫자를 바꾸는 for문
+    for i, user_num in enumerate(user_number):
+        # 문제 숫자와 비교하는 for문
+        for j, cpu_num in enumerate(cpu_numbers):
+            if user_num == cpu_num:
+                if i == j :
+                    s_count = s_count+1
+                else :
+                    b_count = b_count+1
+    print(f'{s_count}S / {b_count}B 입니다.')
 
+    if s_count == 3:
+        break
 
     # 3S가 되었다면? > 정답 맞춤 > 게임 종료
