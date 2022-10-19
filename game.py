@@ -32,3 +32,14 @@ while True :
     user_number.append(input_num % 10) # 1의 자리
 
     print(user_number)
+
+
+    # ?S ?B인지 판단 > 힌트 제공
+
+    s_count = 0
+    b_count = 0
+
+    # 문제 숫자 / 내 숫자 비교 > s/b 갯수 파악
+
+
+    # 3S가 되었다면? > 정답 맞춤 > 게임 종료
