@@ -11,6 +11,9 @@ cpu_numbers = sample(range(1, 10), 3)
 
 print(cpu_numbers)
 
+
+try_count=0
+
 # 사람이 3자리 숫자를 입력 > 맞출때 까지 계속 입력
 # 한칸한칸 비교해야해서 list로 진행
 
@@ -19,6 +22,8 @@ while True :
 
     # 3자리 숫자를 입력하면 > 3칸의 목록으로 분리 
     input_num = int(input('3자리 숫자 입력 : '))
+
+    try_count=try_count+1
 
     #ex. 123 => [1, 2, 3]으로 분리.
     # 3자리 정수가 들어왔다고 전제.
@@ -51,7 +56,9 @@ while True :
                     b_count = b_count+1
     print(f'{s_count}S / {b_count}B 입니다.')
 
-    if s_count == 3:
-        break
-
+    
     # 3S가 되었다면? > 정답 맞춤 > 게임 종료
+    if s_count == 3:
+        print('축하합니다!')
+        print(f'{try_count}번만에 성공했습니다.')
+        break
